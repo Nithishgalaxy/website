@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>VS Code Style Download Page</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Consolas, 'Courier New', monospace;
+      background-color: #1e1e1e;
+      color: #d4d4d4;
+      display: flex;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    .sidebar {
+      width: 60px;
+      background-color: #252526;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding-top: 20px;
+    }
+
+    .sidebar-icon {
+      width: 30px;
+      height: 30px;
+      margin: 10px 0;
+      opacity: 0.6;
+      cursor: pointer;
+    }
+
+    .sidebar-icon:hover {
+      opacity: 1;
+    }
+
+    .main {
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .top-bar {
+      height: 35px;
+      background-color: #333333;
+      padding: 5px 15px;
+      display: flex;
+      align-items: center;
+      color: #9cdcfe;
+    }
+
+    .editor {
+      flex-grow: 1;
+      background-color: #1e1e1e;
+      padding: 20px;
+    }
+
+    .code-window {
+      background-color: #1e1e1e;
+      border: 1px solid #3c3c3c;
+      padding: 20px;
+      border-radius: 5px;
+      line-height: 1.6;
+      color: #dcdcdc;
+    }
+
+    .code-comment {
+      color: #6a9955;
+    }
+
+    .code-keyword {
+      color: #569cd6;
+    }
+
+    .code-string {
+      color: #ce9178;
+    }
+
+    .download-button {
+      display: inline-block;
+      margin-top: 20px;
+      background-color: #007acc;
+      color: white;
+      padding: 10px 20px;
+      text-decoration: none;
+      font-size: 14px;
+      border-radius: 4px;
+      transition: background-color 0.3s ease;
+    }
+
+    .download-button:hover {
+      background-color: #005f9e;
+    }
+  </style>
+</head>
+<body>
+  <div class="sidebar">
+    <img class="sidebar-icon" src="https://img.icons8.com/ios-glyphs/30/ffffff/file.png" alt="Explorer">
+    <img class="sidebar-icon" src="https://img.icons8.com/ios-glyphs/30/ffffff/search--v1.png" alt="Search">
+    <img class="sidebar-icon" src="https://img.icons8.com/ios-glyphs/30/ffffff/settings.png" alt="Settings">
+  </div>
+  <div class="main">
+    <div class="top-bar">download.js</div>
+    <div class="editor">
+      <div class="code-window">
+        <div><span class="code-keyword">const</span> fileUrl = <span class="code-string">"files/sample.pdf"</span>;</div>
+        <div><span class="code-keyword">function</span> <span class="code-keyword">downloadFile</span>() {</div>
+        <div style="padding-left: 20px;">window.location.href = fileUrl;</div>
+        <div>}</div>
+        <a href="files/sample.pdf" download class="download-button">Download sample.pdf</a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
